@@ -16,8 +16,10 @@ const todoList = ref([
 { text: 'vercel', done: false }
 ]);
 const handleClickButton = () => {
-  todoList.value.push(inputValue.value);
-  console.log("choonsik: " + todoList.value)
+  const text = inputValue.value;
+  todoList.value.push({
+    text: text, done: false
+  });
 };
 
 const handlechange = (event) => {
